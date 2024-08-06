@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --navy: 16, 44, 87;
+  --blue: 22, 121, 171;
+  --peach: 255, 146, 146;
+  --light-peach: 255, 232, 232;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,14 +17,18 @@
   }
 }
 
+h1, h2 {
+  color: rgb(var(--peach));
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
+  color: black;
   background: linear-gradient(
       to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
+      rgb(var(--light-peach))
     )
-    rgb(var(--background-start-rgb));
+    white
 }
 
 @layer utilities {
