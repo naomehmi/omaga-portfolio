@@ -31,7 +31,10 @@ export default function Home() {
           <h2 className={`${headers} w-full text-center lg:text-left text-2xl mb-3 mt-10 lg:mt-0`}>Projects</h2>
           <div className="grid grid-rows-3 grid-flow-col justify-around lg:block lg:mx-0">
             {projectNames.map((btn, idx) => (
-              <button className={`text-sm md:text-base lg:text-xl text-left lg:mb-3 hover:underline ${projetcIdx == idx ? 'underline' : ''}`} key={idx} onClick={() => handleIdx(idx)}>{btn}</button>
+              <div key={idx}>
+                <button className={`text-sm md:text-base lg:text-xl text-left lg:mb-3 hover:underline ${projetcIdx == idx ? 'underline' : ''}`} onClick={() => handleIdx(idx)}>{btn}</button>
+                <br />
+              </div>
             ))}
           </div>
         </div>
